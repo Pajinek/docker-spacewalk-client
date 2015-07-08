@@ -1,5 +1,13 @@
 # spacewalk-client
 
+easy way:
+
+```
+sudo -s
+docker pull pajinek/spacewalk-client
+sh run 10
+```
+
 build:
 
 ```
