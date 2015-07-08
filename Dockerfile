@@ -1,4 +1,5 @@
 FROM fedora:22
+MAINTAINER "Pavel Studenik" <pstudeni@redhat.com>
 
 RUN rpm -Uvh http://yum.spacewalkproject.org/nightly-client/Fedora/22/x86_64/spacewalk-client-repo-2.4-3.fc22.noarch.rpm
 RUN sed s/enabled=0/enabled=1/g /etc/yum.repos.d/spacewalk-client-nightly.repo -i
