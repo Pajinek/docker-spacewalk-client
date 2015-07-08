@@ -7,4 +7,5 @@ RUN dnf install rhn-client-tools rhn-check rhn-setup rhnsd m2crypto wget -y
 
 ADD register.sh /root/register.sh
 RUN chmod a+x  /root/register.sh
+CMD /root/register.sh
 

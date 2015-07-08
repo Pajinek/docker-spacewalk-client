@@ -16,7 +16,11 @@ build:
 run:
 
 ```
- docker run -i -t spacewalk-client /root/register.sh <login> <password> <server>
+ docker run -i -t -e RHN_SERVER=<hostname>
+                  -e RHN_USER=<user>
+                  -e RHN_PASS=<password>
+ spacewalk-client
+
 ```
 
 It is possible to running of registration several times simultaneously

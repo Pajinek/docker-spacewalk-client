@@ -1,9 +1,13 @@
 #!/usr/bin/bash
 # register.sh <username> <password> <server>
 
-wget http://$3/pub/RHN-ORG-TRUSTED-SSL-CERT -O /usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT
+RHN_USER=${1:-$RHN_USER}
+RHN_PASS=${2:-$RHN_PASS}
+RHN_SERVER=${3:-$RHN_SERVER}
 
-rhnreg_ks --username=$1 --serverUrl=https://$3/XMLRPC --sslCACert=/usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT --profilename=client --password=$2 --force
+wget http://$RHN_SERVER/pub/RHN-ORG-TRUSTED-SSL-CERT -O /usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT
+
+rhnreg_ks --username=$RHN_USER --serverUrl=https://$RHN_SERVER/XMLRPC --sslCACert=/usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT --profilename=client --password=$RHN_PASS --force
 
 rhn_check -vv
 
