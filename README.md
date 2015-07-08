@@ -11,12 +11,12 @@ sh run 10
 build:
 
 ```
- docker build -t spacewalkclient .
+ docker build -t spacewalk-client .
 ```
 run:
 
 ```
- docker run -i -t spacewalkclient /root/register.sh <login> <password> <server>
+ docker run -i -t spacewalk-client /root/register.sh <login> <password> <server>
 ```
 
 It is possible to running of registration several times simultaneously
