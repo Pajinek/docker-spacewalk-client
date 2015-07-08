@@ -5,3 +5,5 @@ wget http://$3/pub/RHN-ORG-TRUSTED-SSL-CERT -O /usr/share/rhn/RHN-ORG-TRUSTED-SS
 
 rhnreg_ks --username=$1 --serverUrl=https://$3/XMLRPC --sslCACert=/usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT --profilename=client --password=$2 --force
 
+rhn_check -vv
+

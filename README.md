@@ -6,5 +6,12 @@ build:
 ```
 run:
 ```
- sudo docker run -i -t spacewalkclient /usr/bin/bash /root/register.sh <login> <password> <server>
+ docker run -i -t spacewalkclient /root/register.sh <login> <password> <server>
 ```
+
+It is possible to running of registration several times simultaneously
+
+```
+ sh run.sh <number>
+```
+Default value for repeating is 25.
