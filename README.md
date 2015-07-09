@@ -1,11 +1,10 @@
 # spacewalk-client
 
-easy way:
+easy way to get image from public repository:
 
 ```
 sudo -s
 docker pull pajinek/spacewalk-client
-sh run 10
 ```
 
 build:
@@ -13,6 +12,7 @@ build:
 ```
  docker build -t spacewalk-client .
 ```
+
 run:
 
 ```
@@ -20,12 +20,12 @@ run:
                   -e RHN_USER=<user>
                   -e RHN_PASS=<password>
  spacewalk-client
-
 ```
 
-It is possible to running of registration several times simultaneously
+It is possible to running of registration simultaneously several times. Script is contained in source of image on github.
 
 ```
- sh run.sh <number>
+ git clone https://github.com/Varhoo/docker-spacewalk-client.git
+ sh banch.sh <rhn_user> <rhn_password> <rhn_server> <number_registration>
 ```
-Default value for repeating is 25.
+Default value for number of repeating is 25.
