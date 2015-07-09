@@ -1,19 +1,22 @@
 # spacewalk-client
 
-easy way to get image from public repository:
+Original page of project https://github.com/Varhoo/docker-spacewalk-client
+
+## How to start 
+Easy way to get image from public repository:
 
 ```
 sudo -s
 docker pull pajinek/spacewalk-client
 ```
 
-build:
+Build:
 
 ```
  docker build -t spacewalk-client .
 ```
 
-run when build it:
+Run when build it:
 
 ```
  docker run -i -t -e RHN_SERVER=<hostname> \
@@ -22,7 +25,7 @@ run when build it:
  spacewalk-client
 ```
 
-od when pull it:
+or when pull it:
 ```
  docker run -i -t -e RHN_SERVER=<hostname> \
                   -e RHN_USER=<user> \
