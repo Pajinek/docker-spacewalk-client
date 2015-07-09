@@ -1,6 +1,6 @@
 # spacewalk-client
 
-Original page of project https://github.com/Varhoo/docker-spacewalk-client
+Original page of docker image https://github.com/Varhoo/docker-spacewalk-client
 
 ## How to start 
 Easy way to get image from public repository:
