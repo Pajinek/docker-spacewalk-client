@@ -27,7 +27,7 @@ od when pull it:
  docker run -i -t -e RHN_SERVER=<hostname> \
                   -e RHN_USER=<user> \
                   -e RHN_PASS=<password> \
- docker.io/pajinek/spacewalk-client
+ pajinek/spacewalk-client
 ```
 
 
