@@ -16,9 +16,9 @@ build:
 run:
 
 ```
- docker run -i -t -e RHN_SERVER=<hostname>
-                  -e RHN_USER=<user>
-                  -e RHN_PASS=<password>
+ docker run -i -t -e RHN_SERVER=<hostname> \
+                  -e RHN_USER=<user> \
+                  -e RHN_PASS=<password> \
  spacewalk-client
 ```
 
