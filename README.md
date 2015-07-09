@@ -26,6 +26,6 @@ It is possible to running of registration simultaneously several times. Script i
 
 ```
  git clone https://github.com/Varhoo/docker-spacewalk-client.git
- sh banch.sh <rhn_user> <rhn_password> <rhn_server> <number_registration>
+ sh batch.sh <rhn_user> <rhn_password> <rhn_server> <number_registration>
 ```
 Default value for number of repeating is 25.
