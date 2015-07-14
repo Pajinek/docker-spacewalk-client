@@ -15,3 +15,6 @@ rhnreg_ks --username=$RHN_USER --password=$RHN_PASS --force \
 
 rhn_check -vv
 
+yum install rhncfg-* --nogpgcheck -y
+rhn-actions-control --enable-all
+
