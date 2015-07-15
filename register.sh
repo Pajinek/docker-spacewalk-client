@@ -7,13 +7,13 @@ RHN_USER=${1:-$RHN_USER}
 RHN_PASS=${2:-$RHN_PASS}
 RHN_SERVER=${3:-$RHN_SERVER}
 
-wget http://$RHN_SERVER/pub/RHN-ORG-TRUSTED-SSL-CERT -O /usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT
+wget https://$RHN_SERVER/pub/RHN-ORG-TRUSTED-SSL-CERT -O /usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT --no-check-certificate
 
 rhnreg_ks --username=$RHN_USER --password=$RHN_PASS --force \
  --serverUrl=https://$RHN_SERVER/XMLRPC \
  --sslCACert=/usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT
 
-rhn_check -vv
+rhn_check -vv || echo "ERROR: not registered"
 
 yum install rhncfg-* --nogpgcheck -y
 rhn-actions-control --enable-all

@@ -10,6 +10,9 @@ server=$3
 for it in $(seq ${4:-"5"})
 do
    echo "run.. $it"
-   docker run -d -t spacewalk-client /root/register.sh $username \
-            $password $server > /dev/null 2>&1
+   docker run -d -t spacewalk-client \
+        -e RHN_SERVER=$server \
+        -e RHN_USER=$username \
+        -e RHN_PASS=$password \
+   /root/register.sh > /dev/null 2>&1
 done
