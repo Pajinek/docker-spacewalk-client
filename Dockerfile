@@ -1,4 +1,4 @@
-FROM fedora:24
+FROM fedora:23
 MAINTAINER "Pavel Studenik" <pstudeni@redhat.com>
 
 RUN rpm -Uvh http://yum.spacewalkproject.org/nightly-client/Fedora/23/x86_64/spacewalk-client-repo-2.5-3.fc23.noarch.rpm
