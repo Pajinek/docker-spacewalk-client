@@ -7,13 +7,13 @@ Easy way to get image from public repository:
 
 ```
 sudo -s
-docker pull pajinek/spacewalk-client
+docker pull pajinek/docker-spacewalk-client
 ```
 
 Build:
 
 ```
-docker build -t spacewalk-client .
+docker build -t docker-spacewalk-client .
 ```
 
 Run when build it:
@@ -22,7 +22,7 @@ Run when build it:
 docker run -i -t -e RHN_SERVER=<hostname> \
                   -e RHN_USER=<user> \
                   -e RHN_PASS=<password> \
-spacewalk-client
+docker-spacewalk-client
 ```
 
 or when pull it:
@@ -31,7 +31,7 @@ or when pull it:
 docker run -i -t -e RHN_SERVER=<hostname> \
                   -e RHN_USER=<user> \
                   -e RHN_PASS=<password> \
-pajinek/spacewalk-client
+pajinek/docker-spacewalk-client
 ```
 
 
