@@ -6,7 +6,6 @@ Original page of docker image https://github.com/Varhoo/docker-spacewalk-client
 Easy way to get image from public repository:
 
 ```
-sudo -s
 docker pull pajinek/docker-spacewalk-client
 ```
 
